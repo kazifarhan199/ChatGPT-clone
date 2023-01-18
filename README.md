@@ -5,43 +5,42 @@ ChatGPT-clone is a powerful language model trained to understand and respond to 
 
 <img src="./assets/desktop-screenshot.png" alt="phone DesktopExample" height="400"/>
 
+# Working example
+Please look at the attached jupyter notebook(TextGeneratorBot.ipynb) for an example
+
 # DataSet
-(This project was part of a project I did at the university of Minnesota)
+(This project was part of a project I did at the university of Minnesota for Advanced Natural Processing course)
 
 The project gutenberg data was extracted using 
 
 https://github.com/pgcorpus/gutenberg
+<br><br>
 
 This file contains the entire project gutenberg corpus (alltext) and a 10,000,000 word subset of it (smalltext), each divided into an 80-10-10 training validation test split.
 
 The data has been lightly preprocessed to separate punctuation from words and to remove blank lines.
 
 ls |sort -R |cat * | sed '/^[[:space:]]*$/d' | sed -E 's/([[:punct:]])+/ \1 /g'   > alltext
+<br><br>
 
+original gutenberg files (24,089 of them) (wc *.txt)
 
-original gutenberg files (24,089 of them)
+209135776 - 1704216766 - 10835806623 - total
 
-wc *.txt
+<br><br>
 
-209135776  1704216766 10835806623 total
+The first 10,000,000 lines after pre-processing was made into smalltext which was then divided into an 80-10-10 split
 
-after pre-processing
-
-wc alltext
-
-170359408  2123123908 11439287223 alltext
-
-The first 10,000,000 lines of alltext was made into smalltext which was then divided into an 80-10-10 split
 
 data/smalltext$ wc *
 
-  1000000  12754923  67501423 smalltext.test.txt
+  1000000 - 12754923 - 67501423 - smalltext.test.txt
 
-  8000000 102578535 527775260 smalltext.train.txt
+  8000000 - 102578535 - 527775260 - smalltext.train.txt
 
-  1000000  12750958  66439281 smalltext.valid.txt
+  1000000 - 12750958 - 66439281 - smalltext.valid.txt
 
- 10000000 128084416 661715964 total
+ 10000000 - 128084416 - 661715964 - total
 
 
 # Setup
