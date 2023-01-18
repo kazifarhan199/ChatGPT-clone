@@ -17,20 +17,29 @@ The data has been lightly preprocessed to separate punctuation from words and to
 
 ls |sort -R |cat * | sed '/^[[:space:]]*$/d' | sed -E 's/([[:punct:]])+/ \1 /g'   > alltext
 
+
 original gutenberg files (24,089 of them)
+
 wc *.txt
+
 209135776  1704216766 10835806623 total
 
 after pre-processing
+
 wc alltext
+
 170359408  2123123908 11439287223 alltext
 
 The first 10,000,000 lines of alltext was made into smalltext which was then divided into an 80-10-10 split
 
 data/smalltext$ wc *
+
   1000000  12754923  67501423 smalltext.test.txt
+
   8000000 102578535 527775260 smalltext.train.txt
+
   1000000  12750958  66439281 smalltext.valid.txt
+
  10000000 128084416 661715964 total
 
 
