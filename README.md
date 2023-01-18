@@ -1,4 +1,5 @@
 # ChatGPT-clone
+![GitHub](https://img.shields.io/github/license/kazifarhan199/ChatGPT-clone)
 
 ChatGPT-clone is a powerful language model trained to understand and respond to human language. It can be used for a variety of applications such as chatbots, automated customer service, language translation, and more. With its advanced natural language processing capabilities, ChatGPT-clone can understand and respond to complex questions, generate human-like text, and improve user engagement. It is easy to integrate into existing systems and can be fine-tuned to specific industries and use cases.
 
